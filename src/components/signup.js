@@ -15,22 +15,7 @@ const Signup = () => {
         .then(result=> console.log(result))
         .catch(err=> console.log(err))
         navigate('/Login')
-        // Check credentials and set user role
-        // if (username === 'Pady' && password === '2022') {
-        //     localStorage.setItem('userRole', 'student');
-        //     setSuccessMessage('Login successful! Welcome, Pady!');
-        //     navigate('/dashboard');
-        // } else if (username === 'ngaiso' && password === '2023') {
-        //     localStorage.setItem('userRole', 'employer');
-        //     setSuccessMessage('Login successful! Welcome, Ngaiso!');
-        //     navigate('/dashboard');
-        // } else if (username === 'Munashe' && password === '2024') {
-        //     localStorage.setItem('userRole', 'supervisor');
-        //     setSuccessMessage('Login successful! Welcome, Parker!');
-        //     navigate('/dashboard');
-        // } else {
-        //     alert('Invalid Username or Password');
-        // }
+        
     };
 
     return (
@@ -80,7 +65,6 @@ const Signup = () => {
                 <button type="submit">Signup</button>
                 <a href='/login' style={{padding: '20px'}}>Login</a>
             </form>
-            {/* {successMessage && <p className="success-message">{successMessage}</p>} Display success message */}
         </div>
     );
 };

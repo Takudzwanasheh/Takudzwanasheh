@@ -21,6 +21,7 @@ function App() {
                     <Route path="/student" element={<StudentPortal />} />
                     <Route path="/supervisor" element={<SupervisorPortal />} />
                     <Route path="/employer" element={<EmployerPortal />} />
+
                 </Routes>
                 <Footer />
             </div>

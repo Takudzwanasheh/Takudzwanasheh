@@ -8,12 +8,28 @@ app.use(express.json())
 app.use(cors())
 
 mongoose.connect("mongodb://localhost:27017/Employees")
+app.post("/login",(req,res)=>{
+    const {username,password}=req.body
+    EmployeeModel.findOne({username:username})
+    .then(user=>{
+        if(user){
+            if(user.password===password){
+                res.json("success")
+            }else{
+                res.send("Incorect Password!")
+            }
+        }else{
+            res.json("User not found")
+        }
+    })
+})
 
 app.post('/register',(req,res)=>{
        EmployeeModel.create(req.body)
        .then(employees=>res.json(employees))
        .catch(err=>res.json(err))
 })
+
 
 app.listen (3001,() =>{
     console.log("sever is upp and running");

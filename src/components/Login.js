@@ -1,31 +1,26 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [successMessage, setSuccessMessage] = useState(''); // State for success message
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
-
-        // Check credentials and set user role
-        if (username === 'Pady' && password === '2022') {
-            localStorage.setItem('userRole', 'student');
-            setSuccessMessage('Login successful! Welcome, Pady!');
-            navigate('/dashboard');
-        } else if (username === 'ngaiso' && password === '2023') {
-            localStorage.setItem('userRole', 'employer');
-            setSuccessMessage('Login successful! Welcome, Ngaiso!');
-            navigate('/dashboard');
-        } else if (username === 'Munashe' && password === '2024') {
-            localStorage.setItem('userRole', 'supervisor');
-            setSuccessMessage('Login successful! Welcome, Parker!');
-            navigate('/dashboard');
-        } else {
-            alert('Invalid Username or Password');
-        }
+        axios.post('http://localhost:3001/login',{username,password})
+        .then(result=>{
+            console.log(result);
+            if (result.data==="success"){
+                navigate('/Dashboard')
+            }else{
+                alert("wrong Username password TRA Again!");
+                
+            }
+        })
+        .catch(err=> console.log(err));
+        
     };
 
     return (
@@ -60,7 +55,6 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
-            {successMessage && <p className="success-message">{successMessage}</p>} {/* Display success message */}
         </div>
     );
 };
