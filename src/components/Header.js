@@ -8,7 +8,7 @@ const Header = () => {
                 <button onClick={() => {/* handle home click */}}>Home</button>
                 <button onClick={() => {/* handle about click */}}>About</button>
                 <button onClick={() => {/* handle contact click */}}>Contact</button>
-                <button onClick={() => {/* handle login click */}}>Login</button>
+                <button onClick={() => {/* handle login click */}}>Sign up</button>
             </nav>
         </header>
     );

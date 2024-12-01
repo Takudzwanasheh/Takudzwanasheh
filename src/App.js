@@ -8,14 +8,15 @@ import Dashboard from './components/Dashboard';
 import StudentPortal from './components/StudentPortal';
 import SupervisorPortal from './components/SupervisorPortal';
 import EmployerPortal from './components/EmployerPortal';
-
+import Signup from './components/signup';
 function App() {
     return (
         <Router>
             <div className="App">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Login />} />
+                    <Route path="/" element={<Signup />} />
+                    <Route path='/login' element={<Login />}/>
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/student" element={<StudentPortal />} />
                     <Route path="/supervisor" element={<SupervisorPortal />} />

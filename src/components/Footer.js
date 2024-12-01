@@ -5,11 +5,14 @@ const Footer = () => {
         
             
         <footer>
+        {/* <div>
             <img
-            className=''
-                src='public/index.html'
-                alt='uz lolo'
+                className='circle-img'
+                src='https://www.uz.ac.zw/images/uz-logo-1131_1.jpg'
+                alt=''
             />
+
+        </div> */}
             <p>&copy; {Cyear} UZ INTERNISH TRACKER. All rights reserved.</p>
             <div className='footer-btn'>
             <button  onClick={() => {/* handle privacy policy action */}}>Privacy Policy</button> 
