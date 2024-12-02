@@ -24,12 +24,28 @@ app.post("/login",(req,res)=>{
     })
 })
 
+// app.post('/register', (req, res) => {
+//     const { username } = req.body;
+
+//     // Check if the username already exists
+//     EmployeeModel.findOne({ username })
+//         .then(existingEmployee => {
+//             if (existingEmployee) {
+//                 // If the employee already exists, send an error response
+//                 return res.status(400).json({ message: 'Username already exists' });
+//             }
+
+//             // If the username does not exist, create a new employee
+//             return EmployeeModel.create(req.body);
+//         })
+//         .then(newEmployee => res.status(201).json(newEmployee))
+//         .catch(err => res.status(500).json({ error: err.message }));
+// });
 app.post('/register',(req,res)=>{
        EmployeeModel.create(req.body)
        .then(employees=>res.json(employees))
        .catch(err=>res.json(err))
 })
-
 
 app.listen (3001,() =>{
     console.log("sever is upp and running");

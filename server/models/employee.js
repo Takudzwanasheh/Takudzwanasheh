@@ -1,9 +1,10 @@
+const { type } = require('@testing-library/user-event/dist/type')
 const mongoose=require('mongoose')
 
 const EmployeeSchema=new mongoose.Schema({
-    username:String,
-    email:String,
-    password:String
+    username:{type: String, required: true, unique: true },
+    email:{ type: String, required: true, unique: true },
+    password:{ type: String, required: true }
 })
 
 const EmployeeModel=mongoose.model('employees',EmployeeSchema)

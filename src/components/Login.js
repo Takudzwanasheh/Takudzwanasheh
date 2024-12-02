@@ -13,9 +13,9 @@ const Login = () => {
         .then(result=>{
             console.log(result);
             if (result.data==="success"){
-                navigate('/Dashboard')
+                navigate('/employer')
             }else{
-                alert("wrong Username password TRA Again!");
+                alert("wrong Username password please try Again!");
                 
             }
         })
@@ -53,8 +53,10 @@ const Login = () => {
                         required
                     />
                 </div>
+
                 <button type="submit">Login</button>
             </form>
+            <p className='text'>Don't have an Account <a href='./signup'>Sign up</a> </p>
         </div>
     );
 };

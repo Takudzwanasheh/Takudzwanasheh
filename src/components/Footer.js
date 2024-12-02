@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
         {/* <div>
             <img
-                className='circle-img'
+                className='circular_image'
                 src='https://www.uz.ac.zw/images/uz-logo-1131_1.jpg'
                 alt=''
             />

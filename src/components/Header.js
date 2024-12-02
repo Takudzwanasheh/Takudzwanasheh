@@ -12,13 +12,22 @@ const Header = () => {
                 />
 
                 </div>  */}
+                {/* <div class="dropdown">
+                    <button>Dropdown Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#option1">Option 1</a>
+                        <a href="#option2">Option 2</a>
+                        <a href="#option3">Option 3</a>
+                    </div>
+                </div> */}
+
                 <div className='navigationBar' >
                 <ul>
 
-                <li><a href='/Welcome'>Home</a></li>
+                <li><a href='/'>Home</a></li>
                 <li><a href='/About'>About</a></li>
                 <li><a href='/Contact'>Contact</a></li>
-                <li><a href='/'>Sign up</a></li>
+                <li><a href='/signup'>Sign up</a></li>
                 </ul>
                 
                 </div>

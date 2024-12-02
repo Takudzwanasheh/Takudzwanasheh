@@ -7,7 +7,6 @@ const Signup = () => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
-
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
@@ -21,7 +20,7 @@ const Signup = () => {
 
     return (
         <div className="login-container">
-            <h2>Sign up</h2>
+            <h2>Login as Superviser</h2>
             <form onSubmit={handleLogin}>
                 <div className="form-group">
                     {/* <label htmlFor="username">Username:</label> */}
@@ -63,14 +62,11 @@ const Signup = () => {
                         required
                     />
                 </div>
-                
                 <button type="submit">Signup</button>
-                <p className='text'>Already have an Account <a href='./Login'>Login</a> </p>
-
+                <a href='/Singup/superviserLogin' style={{padding: '20px'}}>Login</a>
             </form>
         </div>
     );
 };
-
 
 export default Signup;
